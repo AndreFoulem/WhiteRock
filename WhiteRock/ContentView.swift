@@ -12,6 +12,7 @@ struct ContentView: View {
   
   @EnvironmentObject private var reviewsManager: ReviewsRequestManager
   @Environment(\.requestReview) var requestReview: RequestReviewAction
+  @Environment(\.openURL) var openURL
   
   var body: some View {
         VStack {
@@ -27,6 +28,16 @@ struct ContentView: View {
             Text("Increase")
           }
           .buttonStyle(.borderedProminent)
+          .controlSize(.large)
+          
+          Button{
+            if let link = reviewsManager.reviewLink {
+              openURL(link)
+            }
+          } label: {
+            Text("Leave Review")
+          }
+          .buttonStyle(.bordered)
           .controlSize(.large)
         }
         .padding()

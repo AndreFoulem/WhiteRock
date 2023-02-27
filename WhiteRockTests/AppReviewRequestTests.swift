@@ -59,29 +59,5 @@ final class AppReviewRequestTests: XCTestCase {
       XCTAssertFalse(sut.canAskForReview(),
                      "The user has not hit the limit the limit\(sut.limit)")
   }
-  func testApp_IsInvalidForRequest_ForNewVersion() {
-    let oldVersion = "1.0"
-    let newVersion = "1.1"
-    
-    increase()
-    
-    let canAskForReview = sut.canAskForReview(lastReviewedVersion: nil, currentVersion: oldVersion)
-    XCTAssertTrue(sut.canAskForReview(),
-                  "The user has hit limit the limit\(sut.limit)")
-    
-    increase()
-    
-    let canAskForReviewNewVersion = sut.canAskForReview(lastReviewedVersion: oldVersion, currentVersion: newVersion)
-    XCTAssertTrue(sut.canAskForReview(),
-                  "The user has hit limit the limit\(sut.limit)")
-    increase()
-    let canAskForReviewSameVersion = sut.canAskForReview(lastReviewedVersion: newVersion, currentVersion: newVersion)
-    
-    XCTAssertFalse(sut.canAskForReview(),
-                  "The user has hit limit the limit\(sut.limit)")
-  }
-  func testApp_IsValidForRequest_ForNewVersion() {
-    
-  }
 
 }

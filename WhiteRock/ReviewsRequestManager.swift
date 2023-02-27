@@ -12,6 +12,7 @@ final class ReviewsRequestManager: ObservableObject {
 //  private let userDefaults = UserDefaults.standard
   private let userDefaults: UserDefaults
   private let lastReviewedVersionKey = "skyplanet.WhiteRock.lastReviewedVersionKey"
+  private(set) var reviewLink = URL(string: "https://apps.apple.com/[id]?action=write-review")
   
   let limit = 30
   let reviewCountKey = "skyplanet.WhiteRock.reviewCountKey"
