@@ -32,10 +32,10 @@ struct ContentView: View {
         .padding()
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-        .environmentObject(ReviewsRequestManager())
-    }
-}
+//
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//        .environmentObject(ReviewsRequestManager())
+//    }
+//}

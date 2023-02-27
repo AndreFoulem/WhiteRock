@@ -9,21 +9,29 @@ import Foundation
 
 final class ReviewsRequestManager: ObservableObject {
   
-  private let userDefaults = UserDefaults.standard
-  private let reviewCountKey = "skyplanet.WhiteRock.reviewCountKey"
+//  private let userDefaults = UserDefaults.standard
+  private let userDefaults: UserDefaults
   private let lastReviewedVersionKey = "skyplanet.WhiteRock.lastReviewedVersionKey"
-  private let limit = 30
+  
+  let limit = 30
+  let reviewCountKey = "skyplanet.WhiteRock.reviewCountKey"
+
   
   @Published private(set) var count: Int
   
-  init() {
+  init(userDefaults: UserDefaults = UserDefaults.standard) {
+    self.userDefaults = userDefaults
     self.count = userDefaults.integer(forKey: reviewCountKey)
   }
   
-  func canAskForReview() -> Bool {
-    let mostRecentReviewed = userDefaults.string(forKey: lastReviewedVersionKey)
+  func canAskForReview(
+    lastReviewedVersion: String? = nil,
+    currentVersion: String? = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+  ) -> Bool {
+
+    let mostRecentReviewed = lastReviewedVersion ?? userDefaults.string(forKey: lastReviewedVersionKey)
     
-    guard let currentVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+    guard let currentVersion = currentVersion
     else { fatalError("expected to find a bundle version in the info dict") }
     
     let hasReachedLimit = userDefaults.integer(forKey: reviewCountKey).isMultiple(of: limit)

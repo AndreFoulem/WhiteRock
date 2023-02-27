@@ -8,14 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		901E9C6129AD32720093F4C2 /* ReviewsRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901E9C6029AD32720093F4C2 /* ReviewsRequestManager.swift */; };
+		901E9C6929AD3A300093F4C2 /* AppReviewRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901E9C6829AD3A300093F4C2 /* AppReviewRequestTests.swift */; };
 		90BB318E29A59B3E008B8C1B /* WhiteRockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB318D29A59B3E008B8C1B /* WhiteRockApp.swift */; };
 		90BB319029A59B3E008B8C1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB318F29A59B3E008B8C1B /* ContentView.swift */; };
 		90BB319229A59B3F008B8C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90BB319129A59B3F008B8C1B /* Assets.xcassets */; };
 		90BB319529A59B3F008B8C1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90BB319429A59B3F008B8C1B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		901E9C6A29AD3A300093F4C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90BB318229A59B3E008B8C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90BB318929A59B3E008B8C1B;
+			remoteInfo = WhiteRock;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		901E9C6029AD32720093F4C2 /* ReviewsRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsRequestManager.swift; sourceTree = "<group>"; };
+		901E9C6629AD3A300093F4C2 /* WhiteRockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiteRockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		901E9C6829AD3A300093F4C2 /* AppReviewRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewRequestTests.swift; sourceTree = "<group>"; };
 		90BB318A29A59B3E008B8C1B /* WhiteRock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteRock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90BB318D29A59B3E008B8C1B /* WhiteRockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteRockApp.swift; sourceTree = "<group>"; };
 		90BB318F29A59B3E008B8C1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +37,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		901E9C6329AD3A300093F4C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		90BB318729A59B3E008B8C1B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -34,10 +54,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		901E9C6729AD3A300093F4C2 /* WhiteRockTests */ = {
+			isa = PBXGroup;
+			children = (
+				901E9C6829AD3A300093F4C2 /* AppReviewRequestTests.swift */,
+			);
+			path = WhiteRockTests;
+			sourceTree = "<group>";
+		};
 		90BB318129A59B3E008B8C1B = {
 			isa = PBXGroup;
 			children = (
 				90BB318C29A59B3E008B8C1B /* WhiteRock */,
+				901E9C6729AD3A300093F4C2 /* WhiteRockTests */,
 				90BB318B29A59B3E008B8C1B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				90BB318A29A59B3E008B8C1B /* WhiteRock.app */,
+				901E9C6629AD3A300093F4C2 /* WhiteRockTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +103,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		901E9C6529AD3A300093F4C2 /* WhiteRockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 901E9C6C29AD3A300093F4C2 /* Build configuration list for PBXNativeTarget "WhiteRockTests" */;
+			buildPhases = (
+				901E9C6229AD3A300093F4C2 /* Sources */,
+				901E9C6329AD3A300093F4C2 /* Frameworks */,
+				901E9C6429AD3A300093F4C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				901E9C6B29AD3A300093F4C2 /* PBXTargetDependency */,
+			);
+			name = WhiteRockTests;
+			productName = WhiteRockTests;
+			productReference = 901E9C6629AD3A300093F4C2 /* WhiteRockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		90BB318929A59B3E008B8C1B /* WhiteRock */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90BB319829A59B3F008B8C1B /* Build configuration list for PBXNativeTarget "WhiteRock" */;
@@ -100,6 +148,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					901E9C6529AD3A300093F4C2 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 90BB318929A59B3E008B8C1B;
+					};
 					90BB318929A59B3E008B8C1B = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -119,11 +171,19 @@
 			projectRoot = "";
 			targets = (
 				90BB318929A59B3E008B8C1B /* WhiteRock */,
+				901E9C6529AD3A300093F4C2 /* WhiteRockTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		901E9C6429AD3A300093F4C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		90BB318829A59B3E008B8C1B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,6 +196,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		901E9C6229AD3A300093F4C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				901E9C6929AD3A300093F4C2 /* AppReviewRequestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		90BB318629A59B3E008B8C1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,7 +216,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		901E9C6B29AD3A300093F4C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90BB318929A59B3E008B8C1B /* WhiteRock */;
+			targetProxy = 901E9C6A29AD3A300093F4C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		901E9C6D29AD3A300093F4C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S87U79A5HD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = skyplanet.WhiteRockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteRock.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WhiteRock";
+			};
+			name = Debug;
+		};
+		901E9C6E29AD3A300093F4C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S87U79A5HD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = skyplanet.WhiteRockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteRock.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WhiteRock";
+			};
+			name = Release;
+		};
 		90BB319629A59B3F008B8C1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -271,6 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WhiteRock/Preview Content\"";
+				DEVELOPMENT_TEAM = S87U79A5HD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -299,6 +412,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WhiteRock/Preview Content\"";
+				DEVELOPMENT_TEAM = S87U79A5HD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -322,6 +436,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		901E9C6C29AD3A300093F4C2 /* Build configuration list for PBXNativeTarget "WhiteRockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				901E9C6D29AD3A300093F4C2 /* Debug */,
+				901E9C6E29AD3A300093F4C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		90BB318529A59B3E008B8C1B /* Build configuration list for PBXProject "WhiteRock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
