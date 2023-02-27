@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct WhiteRockApp: App {
+  
+  @StateObject private var reviewsManager = ReviewsRequestManager()
+  
     var body: some Scene {
         WindowGroup {
             ContentView()
+            .environmentObject(reviewsManager)
         }
     }
 }
