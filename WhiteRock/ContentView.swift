@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct ContentView: View {
-    var body: some View {
+  
+  @Environment(\.requestReview) var requestReview: RequestReviewAction
+  
+  var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
