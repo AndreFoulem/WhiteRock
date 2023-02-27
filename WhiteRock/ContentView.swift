@@ -10,17 +10,18 @@ import StoreKit
 
 struct ContentView: View {
   
+  @EnvironmentObject private var reviewsManager: ReviewsRequestManager
   @Environment(\.requestReview) var requestReview: RequestReviewAction
-  @State private var counter: Int = 0
   
   var body: some View {
         VStack {
-           Text("\(counter)")
+          Text("\(reviewsManager.count)")
             .font(.system(.largeTitle, design: .rounded, weight: .bold))
           Button {
-            counter += 1
-            if counter.isMultiple(of: 5) {
-                              requestReview()
+            reviewsManager.increase()
+            
+            if reviewsManager.canAskForReview() {
+              requestReview()
             }
           } label: {
             Text("Increase")
@@ -35,5 +36,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        .environmentObject(ReviewsRequestManager())
     }
 }

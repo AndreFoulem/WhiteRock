@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		901E9C6129AD32720093F4C2 /* ReviewsRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901E9C6029AD32720093F4C2 /* ReviewsRequestManager.swift */; };
 		90BB318E29A59B3E008B8C1B /* WhiteRockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB318D29A59B3E008B8C1B /* WhiteRockApp.swift */; };
 		90BB319029A59B3E008B8C1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB318F29A59B3E008B8C1B /* ContentView.swift */; };
 		90BB319229A59B3F008B8C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90BB319129A59B3F008B8C1B /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		901E9C6029AD32720093F4C2 /* ReviewsRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsRequestManager.swift; sourceTree = "<group>"; };
 		90BB318A29A59B3E008B8C1B /* WhiteRock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteRock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90BB318D29A59B3E008B8C1B /* WhiteRockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteRockApp.swift; sourceTree = "<group>"; };
 		90BB318F29A59B3E008B8C1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				90BB318D29A59B3E008B8C1B /* WhiteRockApp.swift */,
 				90BB318F29A59B3E008B8C1B /* ContentView.swift */,
+				901E9C6029AD32720093F4C2 /* ReviewsRequestManager.swift */,
 				90BB319129A59B3F008B8C1B /* Assets.xcassets */,
 				90BB319329A59B3F008B8C1B /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90BB319029A59B3E008B8C1B /* ContentView.swift in Sources */,
+				901E9C6129AD32720093F4C2 /* ReviewsRequestManager.swift in Sources */,
 				90BB318E29A59B3E008B8C1B /* WhiteRockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
